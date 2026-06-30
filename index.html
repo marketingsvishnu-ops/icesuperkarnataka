@@ -1,311 +1,123 @@
 <!DOCTYPE html>
-<html lang="kn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICE SUPER iGaming ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪರಿಹಾರಗಳು</title>
-    <meta name="description" content="ICE SUPER ಆನ್‌ಲೈನ್ ಗೇಮಿಂಗ್ ವ್ಯವಹಾರಗಳಿಗೆ ಸುರಕ್ಷಿತ iGaming ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪರಿಹಾರಗಳು, ಸಾಫ್ಟ್‌ವೇರ್ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಡಿಜಿಟಲ್ ಮಾರ್ಕೆಟಿಂಗ್ ಸೇವೆಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ.">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        :root {
-            font-family: 'Noto Sans Kannada', 'Poppins', sans-serif;
-            color: #f4f4f4;
-            background: #0b0b0e;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { line-height: 1.6; }
-        a { color: #ffd700; text-decoration: none; }
-        .container { width: min(1100px, 96%); margin: 0 auto; }
-        header { padding: 24px 0; }
-        .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-        .logo a { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.08em; color: #fff; }
-        nav ul { display: flex; flex-wrap: wrap; gap: 18px; list-style: none; }
-        nav li a, .cta-button { padding: 10px 16px; border-radius: 999px; font-weight: 600; }
-        nav li a { background: rgba(255,255,255,0.06); }
-        .cta-button { background: #ffd700; color: #111; }
-        .hero { padding: 100px 0 80px; text-align: center; background: linear-gradient(180deg, rgba(18,18,26,0.95), rgba(3,3,11,0.98)), url('Images/Font.png') center/cover no-repeat; }
-        .hero h1 { font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 18px; }
-        .hero p { max-width: 720px; margin: 0 auto 28px; color: #d0d0d8; font-size: 1.05rem; }
-        .hero .hero-cta { background: #ffd700; color: #111; border: none; border-radius: 999px; padding: 16px 28px; font-size: 1rem; cursor: pointer; }
-        .section-title { margin-bottom: 24px; font-size: 2rem; text-align: center; }
-        .cards { display: grid; gap: 20px; }
-        .feature-grid, .platform-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-        .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 26px; min-height: 220px; }
-        .card h3 { margin-bottom: 14px; font-size: 1.2rem; }
-        .card p { color: #c7c7d2; }
-        .platform-card .card-logo { display: block; margin: 0 auto 18px; max-height: 72px; width: auto; }
-        .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; align-items: center; margin-bottom: 32px; }
-        .logo-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; padding: 18px; display: flex; justify-content: center; align-items: center; min-height: 100px; }
-        .logo-item img { max-height: 60px; max-width: 100%; object-fit: contain; }
-        .platform-card .product-logo h3 { margin-bottom: 12px; }
-        .platform-card .product-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-        .platform-card .product-btns a { flex: 1 1 120px; text-align: center; padding: 12px 14px; border-radius: 999px; font-weight: 600; }
-        .visit-btn { background: rgba(255,255,255,0.08); }
-        .book-btn { background: #ffd700; color: #111; }
-        .promo-section { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; padding: 60px 0; }
-        .promo-text h2 { font-size: 1.8rem; margin-bottom: 20px; color: #fff; }
-        .promo-text p { color: #c7c7d2; margin-bottom: 18px; line-height: 1.8; }
-        .promo-highlight { color: #00d4aa; font-weight: 700; }
-        .promo-price { font-size: 2rem; color: #00d4aa; font-weight: 700; margin: 20px 0; }
-        .promo-mockup { display: flex; justify-content: center; }
-        .promo-mockup img { max-width: 100%; height: auto; max-height: 500px; }
-        .image-slider-section { padding: 60px 0; }
-        .slider-container { position: relative; max-width: 900px; margin: 0 auto; }
-        .slider-wrapper { position: relative; overflow: hidden; border-radius: 24px; }
-        .slider-track { display: flex; transition: transform 0.5s ease-in-out; }
-        .slider-slide { min-width: 100%; display: flex; justify-content: center; align-items: center; background: rgba(255,255,255,0.03); min-height: 400px; }
-        .slider-slide img { max-width: 95%; max-height: 100%; object-fit: contain; }
-        .slider-nav { position: absolute; top: 50%; transform: translateY(-50%); background: #ffd700; border: none; color: #111; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; font-weight: 700; font-size: 1.2rem; z-index: 10; transition: all 0.3s; }
-        .slider-nav:hover { background: #ffed4e; box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4); }
-        .slider-prev { left: 10px; }
-        .slider-next { right: 10px; }
-        .slider-dots { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
-        .slider-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: all 0.3s; }
-        .slider-dot.active { background: #ffd700; width: 32px; border-radius: 6px; }
-        .footer { padding: 60px 0 40px; background: #070708; }
-        .footer-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-        .footer h3, .footer h4 { color: #fff; margin-bottom: 14px; }
-        .footer p, .footer li { color: #b4b4c1; line-height: 1.8; }
-        .footer ul { list-style: none; }
-        .footer-bottom { margin-top: 32px; text-align: center; color: #6d6d7b; font-size: 0.95rem; }
-        .whatsapp-float {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            min-width: 210px;
-            padding: 14px 18px;
-            background: #25d366;
-            color: #fff;
-            border-radius: 999px;
-            box-shadow: 0 18px 40px rgba(0,0,0,0.22);
-            font-weight: 700;
-            z-index: 999;
-            text-decoration: none;
-            animation: whatsappPulse 1.8s infinite ease-in-out;
-        }
-        .whatsapp-float span {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            font-size: 1rem;
-        }
-        @keyframes whatsappPulse {
-            0%, 100% { transform: translateY(0); box-shadow: 0 18px 40px rgba(0,0,0,0.22); }
-            50% { transform: translateY(-4px); box-shadow: 0 24px 48px rgba(0,0,0,0.28); }
-        }
-        @media (max-width: 780px) {
-            .header-inner { flex-direction: column; align-items: stretch; }
-            nav ul { justify-content: center; }
-            .hero { padding: 80px 0 60px; }
-            .whatsapp-float { right: 14px; bottom: 14px; min-width: 190px; }
-            .promo-section { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
-            .promo-text h2 { font-size: 1.4rem; }
-            .promo-price { font-size: 1.6rem; }
-            .slider-slide { min-height: 300px; }
-            .slider-nav { width: 40px; height: 40px; font-size: 1rem; }
-            .slider-prev { left: 5px; }
-            .slider-next { right: 5px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MULTICRIC Support</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:url('https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=1600') center center/cover no-repeat;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+
+.card{
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:520px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:30px;
+    text-align:center;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.logo{
+    font-size:42px;
+    font-weight:900;
+    color:#ffc400;
+    margin-bottom:15px;
+    letter-spacing:2px;
+}
+
+h1{
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+p{
+    line-height:1.7;
+    color:#e5e5e5;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:16px 30px;
+    background:#25D366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1ebe5d;
+    transform:scale(1.05);
+}
+
+.features{
+    margin-top:25px;
+    text-align:left;
+}
+
+.features div{
+    background:rgba(255,255,255,.08);
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:12px;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <div class="container header-inner">
-            <div class="logo"><a href="#home"><img src="Logos/logo.png" alt="ICE SUPER ಲೋಗೋ" style="max-height: 50px;"></a></div>
-            <nav>
-                <ul>
-                    <li><a href="#home">ಮುಖಪುಟ</a></li>
-                    <li><a href="#platforms">ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು</a></li>
-                    <li><a href="#features">ವೈಶಿಷ್ಟ್ಯಗಳು</a></li>
-                    <li><a href="https://wa.me/+447777361250" target="_blank" class="cta-button">ವಾಟ್ಸಾಪ್</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>ಆನ್‌ಲೈನ್ ಗೇಮಿಂಗ್‌ಗಾಗಿ iGaming ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಪರಿಹಾರಗಳು ಮತ್ತು ಮಾರ್ಕೆಟಿಂಗ್</h1>
-            <p>ICE SUPER ವಿಶ್ವದಾದ್ಯಂತದ ಆನ್‌ಲೈನ್ ಗೇಮಿಂಗ್ ಆಪರೇಟರ್‌ಗಳಿಗಾಗಿ ಸುರಕ್ಷಿತ ವೈಟ್-ಲೇಬಲ್ ಕ್ಯಾಸಿನೋ ಮತ್ತು ಸ್ಪೋರ್ಟ್ಸ್‌ಬುಕ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು, ಡಿಜಿಟಲ್ ಮಾರ್ಕೆಟಿಂಗ್ ಮತ್ತು ಅನುಸರಣೆ-ಸಿದ್ಧ ಸೇವೆಗಳನ್ನು ನಿರ್ಮಿಸುತ್ತದೆ.</p>
-            <a href="https://wa.me/+447777361250"><button class="hero-cta">ವಾಟ್ಸಾಪ್</button></a>
-        </div>
-    </section>
+<div class="overlay"></div>
 
-    <section class="image-slider-section">
-        <div class="container">
-            <h2 class="section-title">ಗ್ಯಾಲರಿ ಪ್ರದರ್ಶನ</h2>
-            <div class="slider-container">
-                <div class="slider-wrapper">
-                    <div class="slider-track" id="sliderTrack">
-                        <div class="slider-slide"><img src="Images/Font.png" alt="Image 1"></div>
-                        <div class="slider-slide"><img src="Images/2ndmob1.png" alt="Image 2"></div>
-                        <div class="slider-slide"><img src="Images/3rdmob.png" alt="Image 5"></div>
-                        <div class="slider-slide"><img src="Images/3rdmob.png" alt="Image 6"></div>
-                        <div class="slider-slide"><img src="Images/Case.png" alt="Image 8"></div>
-                    </div>
-                </div>
-                <button class="slider-nav slider-prev" onclick="moveSlide(-1)">❮</button>
-                <button class="slider-nav slider-next" onclick="moveSlide(1)">❯</button>
-                <div class="slider-dots" id="sliderDots"></div>
-            </div>
-        </div>
-    </section>
+<div class="card">
 
-    <section class="container" id="platforms">
-        <h2 class="section-title">ನಮ್ಮ ಪ್ರೀಮಿಯಂ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು</h2>
-        <div class="logo-grid">
-            <a href="https://1xcric.io" target="_blank" class="logo-item"><img src="Logos/1xcric.png" alt="1xCric ಲೋಗೋ"></a>
-            <a href="https://icecric247.com" target="_blank" class="logo-item"><img src="Logos/Cric.png" alt="IceCric ಲೋಗೋ"></a>
-            <a href="https://diamond247.com" target="_blank" class="logo-item"><img src="Logos/Diamond247.png" alt="Diamond247 ಲೋಗೋ"></a>
-            <a href="https://iceexch.in" target="_blank" class="logo-item"><img src="Logos/Exch.png" alt="IceExchange ಲೋಗೋ"></a>
-            <a href="https://ice777.com" target="_blank" class="logo-item"><img src="Logos/Ice777.png" alt="Ice777 ಲೋಗೋ"></a>
-            <a href="https://the100.app" target="_blank" class="logo-item"><img src="Logos/the100.png" alt="The100 ಲೋಗೋ"></a>
-        </div>
-        <div class="cards platform-grid">
-            <div class="card platform-card">
-                <img class="card-logo" src="Logos/1xcric.png" alt="1xCric ಲೋಗೋ">
-                <div class="product-logo"><h3>1xcric.io</h3></div>
-                <p>ಲೈವ್ ಕ್ರಿಕೆಟ್, ಕ್ಯಾಸಿನೋ ಮತ್ತು ವೇಗವಾದ ಪ್ರಾರಂಭದೊಂದಿಗೆ ತಕ್ಷಣ ಆರಂಭಿಸಲು ಸಿದ್ಧವಾದ ಸ್ಪೋರ್ಟ್ಸ್‌ಬುಕ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್.</p>
-                <div class="product-btns">
-                    <a href="https://1xcric.io" target="_blank" class="visit-btn">ವೆಬ್‌ಸೈಟ್ ನೋಡಿ</a>
-                    <a href="https://wa.me/+447777361250" target="_blank" class="book-btn">ಈ ಸೈಟ್ ಬುಕ್ ಮಾಡಿ</a>
-                </div>
-            </div>
-            <div class="card platform-card">
-                <img class="card-logo" src="Logos/Cric.png" alt="IceCric ಲೋಗೋ">
-                <div class="product-logo"><h3>icecric247.com</h3></div>
-                <p>ಮೊಬೈಲ್‌ಗೆ ಹೊಂದಿಕೊಂಡ ವಿನ್ಯಾಸ ಮತ್ತು ಸ್ಪರ್ಧಾತ್ಮಕ ಆದಾಯ ಹಂಚಿಕೆಯೊಂದಿಗೆ ಸಂಪೂರ್ಣ iGaming ಪೋರ್ಟಲ್.</p>
-                <div class="product-btns">
-                    <a href="https://icecric247.com" target="_blank" class="visit-btn">ವೆಬ್‌ಸೈಟ್ ನೋಡಿ</a>
-                    <a href="https://wa.me/+447777361250" target="_blank" class="book-btn">ಈ ಸೈಟ್ ಬುಕ್ ಮಾಡಿ</a>
-                </div>
-            </div>
-            <div class="card platform-card">
-                <img class="card-logo" src="Logos/Diamond247.png" alt="Diamond247 ಲೋಗೋ">
-                <div class="product-logo"><h3>diamond247.com</h3></div>
-                <p>ಅನಾಲಿಟಿಕ್ಸ್, ಪೇಮೆಂಟ್ ಇಂಟಿಗ್ರೇಶನ್ ಮತ್ತು 24/7 ಬೆಂಬಲದೊಂದಿಗೆ ಸುರಕ್ಷಿತ ಕ್ಯಾಸಿನೋ ಮತ್ತು ಬೆಟ್ಟಿಂಗ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್.</p>
-                <div class="product-btns">
-                    <a href="https://diamond247.com" target="_blank" class="visit-btn">ವೆಬ್‌ಸೈಟ್ ನೋಡಿ</a>
-                    <a href="https://wa.me/+447777361250" target="_blank" class="book-btn">ಈ ಸೈಟ್ ಬುಕ್ ಮಾಡಿ</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="logo">MULTICRIC</div>
 
-    <section class="container" id="features" style="padding: 60px 0;">
-        <h2 class="section-title">ICE SUPER ಅನ್ನು ಏಕೆ ಆಯ್ಕೆ ಮಾಡಬೇಕು</h2>
-        <div class="cards feature-grid">
-            <div class="card">
-                <h3>ವೇಗವಾದ ಡಿಪ್ಲಾಯ್‌ಮೆಂಟ್</h3>
-                <p>ನಮ್ಮ ಪರಿಶೀಲಿತ ಸೆಟಪ್ ಪ್ರಕ್ರಿಯೆ ಮತ್ತು ಆಪ್ಟಿಮೈಸ್ ಮಾಡಿದ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಡೆಲಿವರಿಯೊಂದಿಗೆ ನಿಮ್ಮ ಗೇಮಿಂಗ್ ಸೈಟ್ ಅನ್ನು ಬೇಗ ಪ್ರಾರಂಭಿಸಿ.</p>
-            </div>
-            <div class="card">
-                <h3>ನಿಯಮಾನುಸರಣೆ</h3>
-                <p>ನಿಮ್ಮ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಸುರಕ್ಷಿತವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸಲು ಅಂತಾರಾಷ್ಟ್ರೀಯ ಗೇಮಿಂಗ್ ಮಾನದಂಡಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ನಿರ್ಮಿಸಲಾಗಿದೆ.</p>
-            </div>
-            <div class="card">
-                <h3>ಮೊಬೈಲ್-ಫಸ್ಟ್ ವಿನ್ಯಾಸ</h3>
-                <p>ಗರಿಷ್ಠ ಪ್ಲೇಯರ್ ಎಂಗೇಜ್‌ಮೆಂಟ್‌ಗಾಗಿ ಡೆಸ್ಕ್‌ಟಾಪ್, ಟ್ಯಾಬ್ಲೆಟ್ ಮತ್ತು ಮೊಬೈಲ್ ಸಾಧನಗಳಲ್ಲಿ ರೆಸ್ಪಾನ್ಸಿವ್ ಅನುಭವ.</p>
-            </div>
-            <div class="card">
-                <h3>ಪ್ರೀಮಿಯಂ ಬೆಂಬಲ</h3>
-                <p>ನಿಮ್ಮ ಕಾರ್ಯಾಚರಣೆಗಳು ನಿರಂತರವಾಗಿ ನಡೆಯಲು ಪ್ರತಿದಿನ ತಜ್ಞ ತಾಂತ್ರಿಕ ಬೆಂಬಲ ಮತ್ತು ಅಕೌಂಟ್ ಮ್ಯಾನೇಜ್‌ಮೆಂಟ್ ಲಭ್ಯ.</p>
-            </div>
-        </div>
-    </section>
+<h1>Contact Our Support Team</h1>
 
-    <section class="container" id="promo" style="padding: 60px 0;">
-        <div class="promo-section">
-            <div class="promo-text">
-                <h2>ನಮ್ಮ ಹೊಸ <span class="promo-highlight">ಪ್ರೀಮಿಯಂ ವೆಬ್‌ಸೈಟ್</span> ಪಡೆಯಿರಿ</h2>
-                <p>ಅಧುನಿಕ ವೈಶಿಷ್ಟ್ಯಗಳು, ಸುಲಭ ಇಂಟಿಗ್ರೇಶನ್ ಮತ್ತು ಗರಿಷ್ಠ ಆದಾಯ ಸಾಧ್ಯತೆಯೊಂದಿಗೆ ಮುಂದಿನ ತಲೆಮಾರದ iGaming ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಅನುಭವಿಸಿ.</p>
-                <p><span class="promo-highlight">ಎಲ್ಲಾ ಪ್ರೀಮಿಯಂ ಕ್ಯಾಸಿನೋಗಳಿಗೆ</span> ಪ್ರವೇಶ ಪಡೆಯಿರಿ</p>
-                <div class="promo-price">ಕೇವಲ <span style="color: #00d4aa;">0.07P</span><br><span style="font-size: 1rem; color: #c7c7d2;">ಇದುವರೆಗಿನ ಅತಿ ಕಡಿಮೆ ಶೇರಿಂಗ್!</span></div>
-                <a href="https://wa.me/+447777361250"><button class="hero-cta" style="margin-top: 20px;">ಈಗಲೇ ನಿಮ್ಮ ಪ್ಯಾನೆಲ್ ಬುಕ್ ಮಾಡಿ</button></a>
-            </div>
-            <div class="promo-mockup">
-                <img src="Images/Mob1font.png" alt="ಪ್ರೀಮಿಯಂ ವೆಬ್‌ಸೈಟ್ ಮಾಕಪ್">
-            </div>
-        </div>
-    </section>
+<p>
+Get assistance, information, and answers to your questions from our support team.
+</p>
 
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <h3>ICE SUPER</h3>
-                <p>ಜಾಗತಿಕ iGaming ವ್ಯವಹಾರಗಳಿಗೆ ನಾವು ಸ್ಕೇಲಬಲ್ ತಂತ್ರಜ್ಞಾನ, ಸುರಕ್ಷಿತ ಪೇಮೆಂಟ್ ಇಂಟಿಗ್ರೇಶನ್ ಮತ್ತು ಡಿಜಿಟಲ್ ಮಾರ್ಕೆಟಿಂಗ್ ಬೆಂಬಲವನ್ನು ಒದಗಿಸುತ್ತೇವೆ. ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಮತ್ತು ಅನುಸರಣೆ ಫ್ರೇಮ್‌ವರ್ಕ್ ಅನ್ನು ನಾವು ನೋಡಿಕೊಳ್ಳುವಾಗ ನೀವು ಬೆಳವಣಿಗೆಯ ಮೇಲೆ ಗಮನ ಹರಿಸಿ.</p>
-            </div>
-            <div>
-                <h4>ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು</h4>
-                <ul>
-                    <li><a href="#platforms">ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು</a></li>
-                    <li><a href="#features">ವೈಶಿಷ್ಟ್ಯಗಳು</a></li>
-                    <li><a href="https://wa.me/+447777361250">ಸಂಪರ್ಕಿಸಿ</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>ಸಂಪರ್ಕ</h4>
-                <ul>
-                    <li><a href="https://wa.me/+447777361250">ವಾಟ್ಸಾಪ್</a></li>
-                    <li><a href="https://t.me/ice_super">Telegram</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">&copy; 2026 ICE SUPER. ಎಲ್ಲ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.</div>
-    </footer>
+<a class="btn"
+href="https://wa.me/+447546795559?text=Hello%20MULTICRIC%2C%20I%20would%20like%20more%20information.">
+Contact on WhatsApp
+</a>
 
-    <a href="https://wa.me/+447777361250" target="_blank" class="whatsapp-float" aria-label="ವಾಟ್ಸಾಪ್">
-        <span>🟢</span>
-        ವಾಟ್ಸಾಪ್
-    </a>
+<div class="features">
+    <div>✅ Fast Support</div>
+    <div>✅ Easy Assistance</div>
+    <div>✅ Community Updates</div>
+    <div>✅ User Guidance</div>
+</div>
 
-    <script>
-        let currentSlide = 0;
-        const sliderTrack = document.getElementById('sliderTrack');
-        const sliderDots = document.getElementById('sliderDots');
-        const slides = document.querySelectorAll('.slider-slide');
-        const totalSlides = slides.length;
+</div>
 
-        // Initialize dots
-        for (let i = 0; i < totalSlides; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('slider-dot');
-            if (i === 0) dot.classList.add('active');
-            dot.onclick = () => goToSlide(i);
-            sliderDots.appendChild(dot);
-        }
-
-        function moveSlide(direction) {
-            currentSlide += direction;
-            if (currentSlide >= totalSlides) currentSlide = 0;
-            if (currentSlide < 0) currentSlide = totalSlides - 1;
-            updateSlider();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateSlider();
-        }
-
-        function updateSlider() {
-            const offset = -currentSlide * 100;
-            sliderTrack.style.transform = `translateX(${offset}%)`;
-            
-            document.querySelectorAll('.slider-dot').forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        // Auto-advance slides every 5 seconds
-        setInterval(() => moveSlide(1), 5000);
-    </script>
 </body>
 </html>
